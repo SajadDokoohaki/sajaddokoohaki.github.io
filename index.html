@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sajad Dokoohaki - Mechatronics/Mechanical Engineer specializing in Robotics & Advanced Manufacturing">
+    <meta name="keywords" content="Sajad Dokoohaki, Aerospace Engineer, Robotics, CNC, Manufacturing, MATLAB, Python">
+    <meta name="author" content="Sajad Dokoohaki">
+    <title>Sajad Dokoohaki - Professional Resume</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #030303 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image-container {
+            position: relative;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .image-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            font-size: 4em;
+        }
+
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .download-section {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background: white;
+            color: #1e3c72;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .objective {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.05em;
+            text-align: justify;
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+
+        .company {
+            font-size: 1.1em;
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        .date {
+            color: #666;
+            font-style: italic;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .responsibilities li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .responsibilities li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-size: 1.2em;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .degree {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+
+        .institution {
+            color: #667eea;
+            font-size: 1.05em;
+        }
+
+        .project-item h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .project-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #5568d3;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: white;
+            color: #1e3c72;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .download-section {
+                display: none;
+            }
+            
+            .experience-item:hover, .project-item:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .profile-image, .image-placeholder {
+                width: 150px;
+                height: 150px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .download-section {
+                justify-content: center;
+            }
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="profile-image-container">
+                    <img src="profile.jpg" alt="Profile Image" class="profile-image">
+                </div>
+                
+                <div class="header-text">
+                    <h1>Sajad Dokoohaki</h1>
+                    <div class="tagline">Mechatronics/Mechanical Engineer | Robotics & Advanced Manufacturing Specialist</div>
+                    <div class="contact-info">
+                        <div class="contact-item">📧 <a href="mailto:sajjaddokouhaki@gmail.com">sajjaddokouhaki@gmail.com</a></div>
+                        <div class="contact-item">📱 <a href="tel:+989178139398">+98 917 813 9398</a></div>
+                        <div class="contact-item">📍 Tehran, Iran</div>
+                        <div class="contact-item">💻 <a href="https://github.com/SajadDokoohaki" target="_blank">@SajadDokoohaki</a></div>
+                    </div>
+                    <div class="download-section">
+                        <a href="resume_en.pdf" class="download-btn" download target="_blank">📥 Download Resume (English)</a>
+                        <a href="resume_fa.pdf" class="download-btn" download target="_blank">📥 Download Resume (Farsi)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Objective</h2>
+                <p class="objective">A Mechatronics/Mechanical Engineer with a bachelor's degree in Aerospace Engineering from Sharif University of Technology. My experience spans robotics, mechanical design, CNC machining, and advanced manufacturing, with a strong foundation in fluid dynamics, materials science, and control systems. I have worked on diverse industrial and research projects—from precision robotic actuators and automated production lines to advanced simulations in CFD and structural analysis. Proficient in CAD modeling, CFD analysis, and process optimization, I bring both technical expertise and a passion for innovation to heavy industries such as steel casting and oil & gas. I thrive on improving efficiency, safety, and productivity, leveraging tools like MATLAB, Python, Siemens NX, SolidWorks, and Ansys to deliver high-quality engineering solutions.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science, Aerospace Engineering</div>
+                    <div class="institution">Sharif University of Technology, Tehran, Iran</div>
+                    <div class="date">September 2016</div>
+                    <div>Project: Control and Analysis of 1-DOF Cubli</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">High School, Mathematics</div>
+                    <div class="institution">National Organization for Development of Exceptional Talents (Sampad), Shiraz, Iran</div>
+                    <div class="date">September 2012</div>
+                    <div>Grade: 18.75/20</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Robotics Engineer | Design & Manufacturing Engineer | CNC Specialist</div>
+                            <div class="company"><a href="https://medis.studio/" target="_blank" style="color: #667eea; text-decoration: none; transition: all 0.3s;">Medis</a>, Shiraz, Iran</div>
+                        </div>
+                        <div class="date">December 2022 – December 2024</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Contributed to the implementation of a TCP socket-based data transfer system and real-time execution of transmitted commands on robotic actuators (Painverse Project)</li>
+                        <li>Programmed and operated 2-, 3-, and 5-axis CNC machines, executing operations including Deburring, Planar Milling, Multi-Axis Milling, and hybrid 2-/3-axis machining processes</li>
+                        <li>Designed and developed industrial and medical mechanical components with a focus on advancement, leveraging state-of-the-art design and manufacturing technologies</li>
+                        <li>Performed low-level programming and worked with controller boards and single-board computers (Arduino, Raspberry Pi, Tinker Board) to implement and optimize control codes for robotic processes</li>
+                        <li>Conducted structural resistance simulations of robotic and aerospace structures under various loading conditions</li>
+                        <li>Created graphic designs for promotional posters and logos</li>
+                        <li>Developed mathematical models and implemented tailored controllers to achieve smooth motion in robotic actuators</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Fluid Mechanics Specialist | Robotics and Manufacturing Engineer</div>
+                            <div class="company">Avid Mechanic Hafez Sanat Co., Shiraz, Iran</div>
+                        </div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Performed fluid modeling of reactor control rods, including simulation of flow and applied pressure</li>
+                        <li>Modeled, designed, and programmed projects focused on mechanizing and automating production lines, providing process optimization solutions for hospitals, as well as constructing and assembling mechanical projects</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Teaching Assistant — Control Systems</div>
+                            <div class="company">Control Systems Laboratory, Sharif University of Technology, Tehran</div>
+                        </div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Modeled and controlled a quadrotor, implementing various control methods to perform aerial maneuvers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-tag">MATLAB</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">C#</div>
+                    <div class="skill-tag">SolidWorks</div>
+                    <div class="skill-tag">Siemens NX</div>
+                    <div class="skill-tag">AutoCAD</div>
+                    <div class="skill-tag">Ansys</div>
+                    <div class="skill-tag">Simulink</div>
+                    <div class="skill-tag">Git</div>
+                    <div class="skill-tag">Unity Engine</div>
+                    <div class="skill-tag">Blender</div>
+                    <div class="skill-tag">Adobe Illustrator</div>
+                    <div class="skill-tag">Autodesk Maya</div>
+                    <div class="skill-tag">ICDL</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Selected Projects</h2>
+                
+                <div class="project-item">
+                    <h3>Breast Tumor Classification (BreakHis Dataset)</h3>
+                    <p>Implementing Segmentation and Classification on a breast tumor dataset to clarify malignant from benign tumors using deep learning techniques.</p>
+                    <a href="https://github.com/SajadDokoohaki/BreastCancerDataSet" target="_blank">View Project →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Cubli - 1D Inverted Pendulum Control</h3>
+                    <p>Analysis and Control of a Reaction-Wheel based 1D inverted pendulum, implementing advanced control algorithms for stability and balance.</p>
+                    <a href="https://github.com/SajadDokoohaki/Cubli" target="_blank">View Code →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Robot Manipulator Design</h3>
+                    <p>Design and simulation of a robot manipulator for assembly applications using the ARTE toolbox in MATLAB.</p>
+                    <a href="https://github.com/SajadDokoohaki/robotics-matlab" target="_blank">View Code →</a>
+                </div>
+
+                <div class="project-item">
+                    <h3>Quad-Rotor Control System</h3>
+                    <p>Analysis and Control of a Quad-Rotor robot on a stand, implementing various control methods to perform aerial maneuvers (Control Systems Laboratory).</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Light Sport Aircraft (LSA) Design</h3>
+                    <p>Comprehensive preliminary design of an Intelligent Light Small Aircraft, including aerodynamic analysis and performance calculations.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Regional Jet Design</h3>
+                    <p>Complete preliminary design of a Regional Jet aircraft, covering all major systems and performance requirements.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Missile Launch Control</h3>
+                    <p>Analysis and Control of a missile in its launch phase (before booster separation), implementing guidance and control algorithms.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>CFD Flow Simulation</h3>
+                    <p>Simulating the flow over a cylinder using Ansys Fluent Gambit, analyzing drag coefficients and vortex shedding patterns.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Airline Establishment Optimization</h3>
+                    <p>Comprehensive project for designing, scheduling, and optimization of establishing an airline, including route planning and fleet management.</p>
+                </div>
+
+                <div class="project-item">
+                    <h3>Aircraft Wing Load Analysis</h3>
+                    <p>Calculating and Modeling the overall loads on the wings of a Cantilever airplane using Abaqus finite element analysis.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certifications & Courses</h2>
+                <div class="experience-item">
+                    <h3>Painverse Project - Medis</h3>
+                    <p>Contributed to an innovative pain management and rehabilitation project utilizing advanced robotics and VR technology.</p>
+                    <a href="https://www.painverse.org/" target="_blank">View Project →</a>
+                </div>
+                <div class="experience-item">
+                    <h3>Deep Learning - Computer Vision</h3>
+                    <p>Neuromatch Academy (Certificate) - Comprehensive training in deep learning techniques for computer vision applications.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Machine Learning</h3>
+                    <p>Online certification covering fundamental and advanced machine learning algorithms and applications.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>MIT 6.S191: Introduction to Deep Learning</h3>
+                    <p>Completed MIT's intensive course on deep learning fundamentals and applications.</p>
+                    <a href="http://introtodeeplearning.com/" target="_blank">View Course →</a>
+                </div>
+                <div class="experience-item">
+                    <h3>Notable University Courses (High Grades)</h3>
+                    <ul class="responsibilities">
+                        <li>Industrial Drawing - 20.0/20.0</li>
+                        <li>Fundamentals of Programming (C Language) - 19.7/20.0</li>
+                        <li>Aerodynamics 1 - 18.5/20.0</li>
+                        <li>Control Systems Lab - 18.0/20.0</li>
+                        <li>Thermodynamics 1 - 17.6/20.0</li>
+                        <li>Automatic Control - 17.0/20.0</li>
+                        <li>Computer Aided Design 1 - 17.0/20.0</li>
+                        <li>Fundamentals of Electrical Engineering - 17.0/20.0</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Honors & Awards</h2>
+                <div class="experience-item">
+                    <p>🏆 <strong>Ranked 555th in National University Entrance Exam</strong> among 300,000 competitors - demonstrating exceptional academic achievement at the national level.</p>
+                </div>
+                <div class="experience-item">
+                    <p>🏀 <strong>2nd Place in Basketball Tournament</strong> - Ranked 2nd in Basketball matches between faculties of Sharif University of Technology.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Interests & Hobbies</h2>
+                <div class="skills-container">
+                    <div class="skill-tag">⚽ Soccer</div>
+                    <div class="skill-tag">💪 Bodybuilding</div>
+                    <div class="skill-tag">✍️ Writing</div>
+                    <div class="skill-tag">🎮 Game Design</div>
+                    <div class="skill-tag">🚗 Hitchhiking</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Sajad Dokoohaki. All rights reserved.</p>
+            <p>Open to new opportunities in Robotics, Aerospace, and Advanced Manufacturing</p>
+            <div class="social-links">
+                <a href="https://github.com/SajadDokoohaki" target="_blank">GitHub</a>
+                <a href="mailto:sajjaddokouhaki@gmail.com">Email</a>
+                <a href="tel:+989178139398">Call</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <script>
+        // Scroll to top button functionality
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Print-friendly functionality
+        window.addEventListener('beforeprint', function() {
+            document.body.style.background = 'white';
+        });
+
+        window.addEventListener('afterprint', function() {
+            document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        });
+    </script>
+</body>
+</html>
